@@ -1,0 +1,38 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+{{if player.mind_side == 1}}
+<p>In this round, the number of die is {{player.dice_number}}, and your reported side is <b>Up</b>.</p>
+{{endif}}
+{{if player.mind_side == 0}}
+<p>In this round, the number of die is {{player.dice_number}}, your reported side is <b>Down</b>.</p>
+{{endif}}
+<p>The payoff adjustment is {{player.change}}.</p>
+<p>Your payoff in this round is: </p>
+
+
+<table class="table table-bordered">
+    <tr>
+        <td><b>Payoff (before adjustment)</b></td>
+        <td><b>Adjustment</b></td>
+        <td><b>Payoff (after adjustment)</b></td>
+    </tr>
+    <tr>
+        <td>{{player.payoff_before}}</td>
+        <td>{{player.change}}</td>
+        <td>{{player.payoff_after}}</td>
+    </tr>
+</table>
+
+<br>
+
+<center>
+    {{ next_button }}
+</center>
+
+{{ endblock }}
+
+

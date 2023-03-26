@@ -1,0 +1,63 @@
+{{ block title }}
+    Roll the Dice
+    {% load otree static %}
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}"/>
+    <script type="module" src="{% static 'global/js/index.js' %}"></script>
+{{ endblock }}
+
+{{ block content }}
+
+<p>To roll the die, click the button. If the die-rolling animation does not display correctly, please refresh the page.</p>
+
+<center>
+    
+<div id="app"></div>
+
+<br>
+
+<div>
+  <button id="rollBtn" onclick=rollDice()>Roll the Die</button>
+</div>
+<br>
+
+<center><button class="otree-btn-next btn btn-primary">Next</button></center>
+
+</center>
+
+<script>
+window.addEventListener('load', function() {
+  document.getElementById('rollBtn').style.display = 'block';
+});
+
+var button = document.getElementById("rollBtn");
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        // Your code to run when the button is clicked goes here
+    });
+    
+function rollDice() {
+    // Disable the button to prevent multiple clicks
+    document.getElementById("rollBtn").disabled = true;
+    // Change the text of the button to indicate that it has been clicked
+    // Change the text of the button to indicate that it has been clicked
+    document.getElementById("rollBtn").innerHTML = "You have rolled once";
+    document.querySelector('.otree-btn-next.btn.btn-primary').style.display = 'block';
+}
+</script>
+
+<style>
+    #rollBtn {
+      display: none;
+    }
+    
+    .otree-btn-next.btn.btn-primary {
+      display: none;
+    }
+</style>
+
+<script type="text/javascript" src="{% static 'global/js/index.js' %} "></script>
+
+
+
+{{ endblock }}
+

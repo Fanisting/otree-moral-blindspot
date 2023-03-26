@@ -1,0 +1,47 @@
+{{ block title }}
+    Report the Side
+{{ endblock }}
+
+
+{{ block content }}
+
+<p>The number of die is <b>{{dice_number}}</b>. </p>
+
+<center>
+{{ formfields }}
+</center>
+
+<br>
+
+<p>Your earnings depends on the <b>number of the die</b> and <b>the side you report</b></p>
+
+<table class="table table-bordered">
+    <tr>
+    <th></th>
+    <th colspan="6" style = "text-align: center">Earnings (points)</th>
+    </tr>
+    <tr style = "font-weight: normal">
+    <th>Up</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    </tr>
+    <tr>
+    <th>Down</th>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    </tr>
+</table>
+
+<br>
+
+<center>{{ next_button }}</center>
+
+{{ endblock }}

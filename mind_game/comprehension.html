@@ -1,0 +1,20 @@
+{{ block title }}
+    Comprehension Test
+    {% load otree static %}
+{{ endblock }}
+
+
+{{ block content }}
+
+<p>This page is to help you fully understand our experiment. Please provide correct answer to the following questions.</p>
+<p><b>Suppose the outcome of the die is:</b></p>
+
+<center>
+<img src = "{{ static 'dice.png' }}"/>
+</center>
+
+{{ formfields }}
+
+{{ next_button }}
+
+{{ endblock }}

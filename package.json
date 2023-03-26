@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@3d-dice/dice-box-threejs": "^0.0.12",
+    "threejs-dice": "^1.1.0"
+  }
+}

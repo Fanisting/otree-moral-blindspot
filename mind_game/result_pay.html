@@ -1,0 +1,23 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+{{if player.mind_side == 1}}
+<p>In this round, the number of die is {{player.dice_number}}, and your reported side is <b>Up</b>.</p>
+{{endif}}
+{{if player.mind_side == 0}}
+<p>In this round, the number of die is {{player.dice_number}}, your reported side is <b>Down</b>.</p>
+{{endif}}
+<p>Your payoff in this round is: {{player.payoff}}</p>
+
+<br>
+
+<center>
+    {{ next_button }}
+</center>
+
+{{ endblock }}
+
+
